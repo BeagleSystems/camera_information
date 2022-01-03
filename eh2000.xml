@@ -6,7 +6,7 @@
     </definition>
     <parameters>
         <!-- control = 0 tells us this should not create an automatic UI control -->
-        <parameter name="CAM_MODE" type="uint32" default="1" control="0">
+        <parameter name="CAM_MODE" type="uint32" default="0" control="1">
             <description>Camera Mode</description>
             <!-- This tells us when this parameter changes, these parameters must be updated (requested)-->
             <updates>
@@ -17,18 +17,15 @@
             </updates>
             <options>
                 <option name="Photo" value="0">
-                    <!-- This tells us when Camera Mode is set to Photo mode, the following parameters should be ignored (hidden from UI or disabled)-->
                     <exclusions>
-                        <exclude>CAM_VIDRES</exclude>
-                        <exclude>CAM_VIDFMT</exclude>
                     </exclusions>
                 </option>
                 <option name="Video" value="1">
-                    <!-- Conversely, when Camera Mode is set to Photo mode, the following parameters should be ignored (hidden from UI or disabled)-->
+                    <!-- When Camera Mode is set to Photo mode, the following parameters should be ignored (hidden from UI or disabled)-->
                     <exclusions>
                         <exclude>CAM_PHOTOFMT</exclude>
                         <exclude>CAM_PHOTOQUAL</exclude>
-                        <exclude>CAM_COLORMODE</exclude>
+                        <exclude>CAM_PHOTOSIZE</exclude>
                     </exclusions>
                     <parameterranges>
                         <parameterrange parameter="CAM_ISO">
@@ -52,7 +49,7 @@
                         <exclude>CAM_VIDFMT</exclude>
                         <exclude>CAM_PHOTOFMT</exclude>
                         <exclude>CAM_PHOTOQUAL</exclude>
-                        <exclude>CAM_COLORMODE</exclude>
+                        <exclude>CAM_PHOTOSIZE</exclude>
                     </exclusions>
                 </option>
             </options>
