@@ -183,7 +183,7 @@
                 <option name="+3" value="10" />
             </options>
         </parameter>
-        <parameter name="CAM_PHOTOQUAL" type="uint32" default="0">
+        <parameter name="CAM_PHOTOQUAL" type="uint32" default="3">
             <description>Image Format</description>
             <options>
                 <option name="STD" value="1" />
