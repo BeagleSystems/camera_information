@@ -12,6 +12,7 @@
             <updates>
                 <update>CAM_SHUTTERSPD</update>
                 <update>CAM_ISO</update>
+                <update>CAM_APERTURE</update>
                 <update>CAM_VIDRES</update>
             </updates>
             <options>
@@ -63,15 +64,36 @@
                 <update>CAM_ISO</update>
             </updates>
             <options default="0">
-                <option name="Auto" value="0">
+                <option name="Intelligent auto mode" value="0">
                     <exclusions>
-                        <exclude>CAM_ISO</exclude>
+                        <exclude>CAM_SHUTTERSPD</exclude>
+                        <exclude>CAM_APERTURE</exclude>
+                    </exclusions>
+                </option>
+                <option name="Advanced auto mode" value="1">
+                    <exclusions>
+                        <exclude>CAM_SHUTTERSPD</exclude>
+                        <exclude>CAM_APERTURE</exclude>
+                    </exclusions>
+                </option>
+                <option name="Program auto mode" value="2">
+                    <exclusions>
+                        <exclude>CAM_SHUTTERSPD</exclude>
+                        <exclude>CAM_APERTURE</exclude>
+                    </exclusions>
+                </option>
+                <option name="Aperture priority" value="3">
+                    <exclusions>
                         <exclude>CAM_SHUTTERSPD</exclude>
                     </exclusions>
                 </option>
-                <option name="Manual" value="1">
+                <option name="Shutter priority" value="4">
                     <exclusions>
-                        <exclude>CAM_EV</exclude>
+                        <exclude>CAM_APERTURE</exclude>
+                    </exclusions>
+                </option>
+                <option name="Manual" value="5">
+                    <exclusions>
                     </exclusions>
                 </option>
             </options>
@@ -99,6 +121,34 @@
                 <option name="1/1600" value="17" />
                 <option name="1/2500" value="18" />
                 <option name="1/4000" value="19" />
+            </options>
+        </parameter>
+        <parameter name="CAM_APERTURE" type="uint32" default="16">
+            <description>Aperture</description>
+            <options>
+                <option name="F2.8" value="10" />
+                <option name="F3.2" value="11" />
+                <option name="F3.5" value="12" />
+                <option name="F4.0" value="13" />
+                <option name="F4.5" value="14" />
+                <option name="F5.0" value="15" />
+                <option name="F5.6" value="16" />
+                <option name="F6.3" value="17" />
+                <option name="F7.1" value="18" />
+                <option name="F8.0" value="19" />
+                <option name="F9.0" value="20" />
+                <option name="F10.0" value="21" />
+                <option name="F11.0" value="22" />
+                <option name="F13.0" value="23" />
+                <option name="F14.0" value="24" />
+                <option name="F16.0" value="25" />
+                <option name="F18.0" value="26" />
+                <option name="F20.0" value="27" />
+                <option name="F22.0" value="28" />
+                <option name="F25.0" value="29" />
+                <option name="F29.0" value="30" />
+                <option name="F32.0" value="31" />
+                <option name="F36.0" value="32" />
             </options>
         </parameter>
         <parameter name="CAM_ISO" type="uint32" default="0">
