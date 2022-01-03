@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mavlinkcamera>
+    <definition version="7">
+        <model>EH2000</model>
+        <vendor>Foxtech</vendor>
+    </definition>
+    <parameters>
+        <!-- control = 0 tells us this should not create an automatic UI control -->
+        <parameter name="CAM_MODE" type="uint32" default="1" control="0">
+            <description>Camera Mode</description>
+            <!-- This tells us when this parameter changes, these parameters must be updated (requested)-->
+            <updates>
+                <update>CAM_SHUTTERSPD</update>
+                <update>CAM_ISO</update>
+                <update>CAM_VIDRES</update>
+            </updates>
+            <options>
+                <option name="Photo" value="0">
+                    <!-- This tells us when Camera Mode is set to Photo mode, the following parameters should be ignored (hidden from UI or disabled)-->
+                    <exclusions>
+                        <exclude>CAM_VIDRES</exclude>
+                        <exclude>CAM_VIDFMT</exclude>
+                    </exclusions>
+                </option>
+                <option name="Video" value="1">
+                    <!-- Conversely, when Camera Mode is set to Photo mode, the following parameters should be ignored (hidden from UI or disabled)-->
+                    <exclusions>
+                        <exclude>CAM_PHOTOFMT</exclude>
+                        <exclude>CAM_PHOTOQUAL</exclude>
+                        <exclude>CAM_COLORMODE</exclude>
+                    </exclusions>
+                    <parameterranges>
+                        <parameterrange parameter="CAM_ISO" condition="CAM_EXPMODE=1">
+                            <roption name="AUTO" value="0" />
+                            <roption name="100" value="1" />
+                            <roption name="160" value="2" />
+                            <roption name="250" value="3" />
+                            <roption name="400" value="4" />
+                            <roption name="640" value="5" />
+                            <roption name="800" value="6" />
+                            <roption name="1250" value="7" />
+                            <roption name="2000" value="8" />
+                            <roption name="3200" value="9" />
+                            <roption name="5000" value="10" />
+                        </parameterrange>
+                    </parameterranges>
+                </option>
+                <option name="Download" value="2">
+                    <exclusions>
+                        <exclude>CAM_VIDRES</exclude>
+                        <exclude>CAM_VIDFMT</exclude>
+                        <exclude>CAM_PHOTOFMT</exclude>
+                        <exclude>CAM_PHOTOQUAL</exclude>
+                        <exclude>CAM_COLORMODE</exclude>
+                    </exclusions>
+                </option>
+            </options>
+        </parameter>
+        <parameter name="CAM_EXPMODE" type="uint32" default="0">
+            <description>Exposure Mode</description>
+            <updates>
+                <update>CAM_SHUTTERSPD</update>
+                <update>CAM_ISO</update>
+            </updates>
+            <options default="0">
+                <option name="Auto" value="0">
+                    <exclusions>
+                        <exclude>CAM_ISO</exclude>
+                        <exclude>CAM_SHUTTERSPD</exclude>
+                    </exclusions>
+                </option>
+                <option name="Manual" value="1">
+                    <exclusions>
+                        <exclude>CAM_EV</exclude>
+                    </exclusions>
+                </option>
+            </options>
+        </parameter>
+        <parameter name="CAM_SHUTTERSPD" type="uint32" default="17">
+            <description>Shutter Speed</description>
+            <options>
+                <option name="30" value="0" />
+                <option name="20" value="1" />
+                <option name="10" value="2" />
+                <option name="1" value="3" />
+                <option name="1/2" value="4" />
+                <option name="1/5" value="5" />
+                <option name="1/10" value="6" />
+                <option name="1/15" value="7" />
+                <option name="1/25" value="8" />
+                <option name="1/40" value="9" />
+                <option name="1/80" value="10" />
+                <option name="1/125" value="11" />
+                <option name="1/200" value="12" />
+                <option name="1/320" value="13" />
+                <option name="1/500" value="14" />
+                <option name="1/800" value="15" />
+                <option name="1/1250" value="16" />
+                <option name="1/1600" value="17" />
+                <option name="1/2500" value="18" />
+                <option name="1/4000" value="19" />
+            </options>
+        </parameter>
+        <parameter name="CAM_ISO" type="uint32" default="0">
+            <description>ISO</description>
+            <options>
+                <option name="AUTO" value="0" />
+                <option name="100" value="1" />
+                <option name="160" value="2" />
+                <option name="250" value="3" />
+                <option name="400" value="4" />
+                <option name="640" value="5" />
+                <option name="800" value="6" />
+                <option name="1250" value="7" />
+                <option name="2000" value="8" />
+                <option name="3200" value="9" />
+                <option name="5000" value="10" />
+                <option name="8000" value="11" />
+                <option name="12800" value="12" />
+                <option name="16000" value="13" />
+            </options>
+        </parameter>
+        <parameter name="CAM_EV" type="uint32t" default="5">
+            <description>Exposure Compensation</description>
+            <options>
+                <option name="-3" value="0" />
+                <option name="-2.3" value="1" />
+                <option name="-1.7" value="2" />
+                <option name="-1.0" value="3" />
+                <option name="-0.3" value="4" />
+                <option name="0" value="5" />
+                <option name="+0.3" value="6" />
+                <option name="+1.0" value="7" />
+                <option name="+1.7" value="8" />
+                <option name="+2.3" value="9" />
+                <option name="+3" value="10" />
+            </options>
+        </parameter>
+        <parameter name="CAM_COLORMODE" type="uint32" default="1">
+            <description>Color Mode</description>
+            <options>
+                <option name="Neutral" value="0" />
+                <option name="Enhanced" value="1" />
+                <option name="Night" value="3" />
+                <option name="Unprocessed" value="2" />
+            </options>
+        </parameter>
+        <parameter name="CAM_PHOTOQUAL" type="uint32" default="0">
+            <description>Image Format</description>
+            <options>
+                <option name="STD" value="1" />
+                <option name="FINE" value="2" />
+                <option name="RAW+JPEG" value="3" />
+            </options>
+        </parameter>
+        <parameter name="CAM_PHOTOSIZE" type="uint32" default="1">
+            <description>Image Size</description>
+            <options>
+                <option name="L: 5456x3632" value="1" />
+                <option name="M: 3872x2576" value="2" />
+                <option name="S: 2736x1824" value="3" />
+            </options>
+        </parameter>
+    </parameters>
+</mavlinkcamera>
