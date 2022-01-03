@@ -31,7 +31,7 @@
                         <exclude>CAM_COLORMODE</exclude>
                     </exclusions>
                     <parameterranges>
-                        <parameterrange parameter="CAM_ISO" condition="CAM_EXPMODE=1">
+                        <parameterrange parameter="CAM_ISO">
                             <roption name="AUTO" value="0" />
                             <roption name="100" value="1" />
                             <roption name="160" value="2" />
@@ -170,7 +170,7 @@
                 <option name="16000" value="13" />
             </options>
         </parameter>
-        <parameter name="CAM_EV" type="uint32t" default="5">
+        <parameter name="CAM_EV" type="uint32" default="5">
             <description>Exposure Compensation</description>
             <options>
                 <option name="-3" value="0" />
@@ -184,15 +184,6 @@
                 <option name="+1.7" value="8" />
                 <option name="+2.3" value="9" />
                 <option name="+3" value="10" />
-            </options>
-        </parameter>
-        <parameter name="CAM_COLORMODE" type="uint32" default="1">
-            <description>Color Mode</description>
-            <options>
-                <option name="Neutral" value="0" />
-                <option name="Enhanced" value="1" />
-                <option name="Night" value="3" />
-                <option name="Unprocessed" value="2" />
             </options>
         </parameter>
         <parameter name="CAM_PHOTOQUAL" type="uint32" default="0">
