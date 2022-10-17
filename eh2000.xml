@@ -199,5 +199,15 @@
                 <option name="S: 2736x1824" value="3" />
             </options>
         </parameter>
+        <parameter name="CAM_FOCUSMODE" type="uint32" default="1">
+            <description>Focus Mode</description>
+            <options>
+                <option name="Auto-focus" value="0" />
+                <option name="Focus+" value="1" />
+                <option name="Stop focus+" value="2" />
+                <option name="Focus-" value="3" />
+                <option name="Stop focus-" value="4" />
+            </options>
+        </parameter>
     </parameters>
 </mavlinkcamera>
