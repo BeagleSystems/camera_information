@@ -183,6 +183,13 @@
                 <option name="+3" value="10" />
             </options>
         </parameter>
+        <parameter name="CAM_SAVEPATH" type="int32" default="0">
+            <description>Image Format</description>
+            <options>
+                <option name="Front SD card" value="0" />
+                <option name="Side SD card" value="1" />
+            </options>
+        </parameter>
         <parameter name="CAM_PHOTOQUAL" type="int32" default="3">
             <description>Image Format</description>
             <options>
@@ -207,6 +214,7 @@
                 <option name="Stop focus+" value="2" />
                 <option name="Focus-" value="3" />
                 <option name="Stop focus-" value="4" />
+                <option name="Fix focus" value="5" />
             </options>
         </parameter>
         <parameter name="CAM_FOCUSVAL" type="int32" default="0">
