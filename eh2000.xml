@@ -183,8 +183,8 @@
                 <option name="+3" value="10" />
             </options>
         </parameter>
-        <parameter name="CAM_SAVEPATH" type="int32" default="0">
-            <description>Image Format</description>
+        <parameter name="CAM_SAVEPATH" type="int32" default="1">
+            <description>Image Save Path</description>
             <options>
                 <option name="Front SD card" value="0" />
                 <option name="Side SD card" value="1" />
