@@ -323,5 +323,12 @@
                 <option name="100" value="100" />
             </options>
         </parameter>
+        <parameter name="CAM_UPLOAD" type="int32" default="1">
+            <description>Image Upload</description>
+            <options>
+                <option name="Idle" value="0" />
+                <option name="Upload now" value="1" />
+            </options>
+        </parameter>
     </parameters>
 </mavlinkcamera>
