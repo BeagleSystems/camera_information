@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mavlinkcamera>
+    <definition version="7">
+        <model>A7R-SAMYANG</model>
+        <vendor>SONY</vendor>
+    </definition>
+    <parameters>
+        <!-- control = 0 tells us this should not create an automatic UI control -->
+        <parameter name="CAM_MODE" type="int32" default="0" control="1">
+            <description>Camera Mode</description>
+            <!-- This tells us when this parameter changes, these parameters must be updated (requested)-->
+            <updates>0
+                <update>CAM_SHUTTERSPD</update>
+                <update>CAM_ISO</update>
+                <update>CAM_APERTURE</update>
+                <update>CAM_VIDRES</update>
+            </updates>
+            <options>
+                <option name="Photo" value="0">
+                    <exclusions>
+                    </exclusions>
+                </option>
+                <option name="Video" value="1">
+                    <!-- When Camera Mode is set to Photo mode, the following parameters should be ignored (hidden from UI or disabled)-->
+                    <exclusions>
+                        <exclude>CAM_PHOTOFMT</exclude>
+                        <exclude>CAM_PHOTOQUAL</exclude>
+                        <exclude>CAM_PHOTOSIZE</exclude>
+                        <exclude></exclude>
+                    </exclusions>
+                    <parameterranges>
+                        <parameterrange parameter="CAM_ISO">
+                            <roption name="AUTO" value="0" />
+                            <roption name="100" value="1" />
+                            <roption name="160" value="2" />
+                            <roption name="250" value="3" />
+                            <roption name="400" value="4" />
+                            <roption name="640" value="5" />
+                            <roption name="800" value="6" />
+                            <roption name="1250" value="7" />
+                            <roption name="2000" value="8" />
+                            <roption name="3200" value="9" />
+                            <roption name="5000" value="10" />
+                        </parameterrange>
+                    </parameterranges>
+                </option>
+                <option name="Download" value="2">
+                    <exclusions>
+                        <exclude>CAM_VIDRES</exclude>
+                        <exclude>CAM_VIDFMT</exclude>
+                        <exclude>CAM_PHOTOFMT</exclude>
+                        <exclude>CAM_PHOTOQUAL</exclude>
+                        <exclude>CAM_PHOTOSIZE</exclude>
+                    </exclusions>
+                </option>
+            </options>
+        </parameter>
+        <parameter name="CAM_EXPMODE" type="int32" default="0">
+            <description>Exposure Mode</description>
+            <updates>
+                <update>CAM_SHUTTERSPD</update>
+                <update>CAM_ISO</update>
+            </updates>
+            <options default="0">
+                <option name="AUTO" value="0">
+                    <exclusions>
+                        <exclude>CAM_ISO</exclude>
+                        <exclude>CAM_SHUTTERSPD</exclude>
+                        <exclude>CAM_APERTURE</exclude>
+                    </exclusions>
+                </option>
+                <option name="P auto mode" value="1">
+                    <exclusions>
+                        <exclude>CAM_SHUTTERSPD</exclude>
+                        <exclude>CAM_APERTURE</exclude>
+                    </exclusions>
+                </option>
+                <option name="A aperture priority" value="2">
+                    <exclusions>
+                        <exclude>CAM_SHUTTERSPD</exclude>
+                    </exclusions>
+                </option>
+                <option name="S shutter speed priority" value="3">
+                    <exclusions>
+                        <exclude>CAM_APERTURE</exclude>
+                    </exclusions>
+                </option>
+                <option name="M manual" value="4">
+                    <exclusions>
+                    </exclusions>
+                </option>
+            </options>
+        </parameter>
+        <parameter name="CAM_SHUTTERSPD" type="int32" default="17">
+            <description>Shutter Speed</description>
+            <options>
+                <option name="30" value="0" />
+                <option name="20" value="1" />
+                <option name="10" value="2" />
+                <option name="1" value="3" />
+                <option name="1/2" value="4" />
+                <option name="1/5" value="5" />
+                <option name="1/10" value="6" />
+                <option name="1/15" value="7" />
+                <option name="1/25" value="8" />
+                <option name="1/40" value="9" />
+                <option name="1/80" value="10" />
+                <option name="1/125" value="11" />
+                <option name="1/200" value="12" />
+                <option name="1/320" value="13" />
+                <option name="1/500" value="14" />
+                <option name="1/800" value="15" />
+                <option name="1/1250" value="16" />
+                <option name="1/1600" value="17" />
+                <option name="1/2500" value="18" />
+                <option name="1/4000" value="19" />
+            </options>
+        </parameter>
+        <parameter name="CAM_APERTURE" type="int32" default="16">
+            <description>Aperture</description>
+            <options>
+                <option name="F1.8" value="180" />
+                <option name="F2.0" value="200" />
+                <option name="F2.2" value="220" />
+                <option name="F2.5" value="250" />
+                <option name="F2.8" value="280" />
+                <option name="F3.2" value="320" />
+                <option name="F3.5" value="350" />
+                <option name="F4.0" value="400" />
+                <option name="F4.5" value="450" />
+                <option name="F5.0" value="500" />
+                <option name="F5.6" value="560" />
+                <option name="F6.3" value="630" />
+                <option name="F7.1" value="710" />
+                <option name="F8.0" value="800" />
+                <option name="F9.0" value="900" />
+                <option name="F10.0" value="1000" />
+                <option name="F11.0" value="1100" />
+                <option name="F13.0" value="1300" />
+                <option name="F14.0" value="1400" />
+                <option name="F16.0" value="1600" />
+                <option name="F18.0" value="1800" />
+                <option name="F20.0" value="2000" />
+                <option name="F22.0" value="2200" />
+            </options>
+        </parameter>
+        <parameter name="CAM_ISO" type="int32" default="0">
+            <description>ISO</description>
+            <options>
+                <option name="AUTO" value="0" />
+                <option name="100" value="1" />
+                <option name="125" value="1" />
+                <option name="160" value="2" />
+                <option name="200" value="1" />
+                <option name="250" value="3" />
+                <option name="400" value="4" />
+                <option name="640" value="5" />
+                <option name="800" value="6" />
+                <option name="1250" value="7" />
+                <option name="2000" value="8" />
+                <option name="3200" value="9" />
+                <option name="5000" value="10" />
+                <option name="8000" value="11" />
+                <option name="12800" value="12" />
+                <option name="16000" value="13" />
+            </options>
+        </parameter>
+        <parameter name="CAM_EV" type="int32" default="5">
+            <description>Exposure Compensation</description>
+            <options>
+                <option name="-3" value="0" />
+                <option name="-2.3" value="1" />
+                <option name="-1.7" value="2" />
+                <option name="-1.0" value="3" />
+                <option name="-0.3" value="4" />
+                <option name="0" value="5" />
+                <option name="+0.3" value="6" />
+                <option name="+1.0" value="7" />
+                <option name="+1.7" value="8" />
+                <option name="+2.3" value="9" />
+                <option name="+3" value="10" />
+            </options>
+        </parameter>
+        <parameter name="CAM_SAVEPATH" type="int32" default="1">
+            <description>Image Save Path</description>
+            <options>
+                <option name="Front SD card" value="1" />
+                <option name="Side SD card" value="0" />
+            </options>
+        </parameter>
+        <parameter name="CAM_PHOTOQUAL" type="int32" default="3">
+            <description>Image Format</description>
+            <options>
+                <option name="STD" value="1" />
+                <option name="FINE" value="2" />
+                <option name="RAW+JPEG" value="3" />
+            </options>
+        </parameter>
+        <parameter name="CAM_PHOTOSIZE" type="int32" default="1">
+            <description>Image Size</description>
+            <options>
+                <option name="L: 5456x3632" value="1" />
+                <option name="M: 3872x2576" value="2" />
+                <option name="S: 2736x1824" value="3" />
+            </options>
+        </parameter>
+        <parameter name="CAM_FOCUSMODE" type="int32" default="0">
+            <description>Focus Mode</description>
+            <options>
+                <option name="Manual" value="1" />
+                <option name="AF_S" value="2" />
+                <option name="AF_C" value="3" />
+                <option name="AF_A" value="4" />
+                <option name="DMF" value="6" />
+            </options>
+        </parameter>
+        <parameter name="CAM_FOCUSVAL" type="int32" default="0">
+            <description>Focus Value</description>
+            <options>
+                <option name="0" value="0" />
+                <option name="1" value="1" />
+                <option name="2" value="2" />
+                <option name="3" value="3" />
+                <option name="4" value="4" />
+                <option name="5" value="5" />
+                <option name="6" value="6" />
+                <option name="7" value="7" />
+                <option name="8" value="8" />
+                <option name="9" value="9" />
+                <option name="10" value="10" />
+                <option name="11" value="11" />
+                <option name="12" value="12" />
+                <option name="13" value="13" />
+                <option name="14" value="14" />
+                <option name="15" value="15" />
+                <option name="16" value="16" />
+                <option name="17" value="17" />
+                <option name="18" value="18" />
+                <option name="19" value="19" />
+                <option name="20" value="20" />
+                <option name="21" value="21" />
+                <option name="22" value="22" />
+                <option name="23" value="23" />
+                <option name="24" value="24" />
+                <option name="25" value="25" />
+                <option name="26" value="26" />
+                <option name="27" value="27" />
+                <option name="28" value="28" />
+                <option name="29" value="29" />
+                <option name="30" value="30" />
+                <option name="31" value="31" />
+                <option name="32" value="32" />
+                <option name="33" value="33" />
+                <option name="34" value="34" />
+                <option name="35" value="35" />
+                <option name="36" value="36" />
+                <option name="37" value="37" />
+                <option name="38" value="38" />
+                <option name="39" value="39" />
+                <option name="40" value="40" />
+                <option name="41" value="41" />
+                <option name="42" value="42" />
+                <option name="43" value="43" />
+                <option name="44" value="44" />
+                <option name="45" value="45" />
+                <option name="46" value="46" />
+                <option name="47" value="47" />
+                <option name="48" value="48" />
+                <option name="49" value="49" />
+                <option name="50" value="50" />
+                <option name="51" value="51" />
+                <option name="52" value="52" />
+                <option name="53" value="53" />
+                <option name="54" value="54" />
+                <option name="55" value="55" />
+                <option name="56" value="56" />
+                <option name="57" value="57" />
+                <option name="58" value="58" />
+                <option name="59" value="59" />
+                <option name="60" value="60" />
+                <option name="61" value="61" />
+                <option name="62" value="62" />
+                <option name="63" value="63" />
+                <option name="64" value="64" />
+                <option name="65" value="65" />
+                <option name="66" value="66" />
+                <option name="67" value="67" />
+                <option name="68" value="68" />
+                <option name="69" value="69" />
+                <option name="70" value="70" />
+                <option name="71" value="71" />
+                <option name="72" value="72" />
+                <option name="73" value="73" />
+                <option name="74" value="74" />
+                <option name="75" value="75" />
+                <option name="76" value="76" />
+                <option name="77" value="77" />
+                <option name="78" value="78" />
+                <option name="79" value="79" />
+                <option name="80" value="80" />
+                <option name="81" value="81" />
+                <option name="82" value="82" />
+                <option name="83" value="83" />
+                <option name="84" value="84" />
+                <option name="85" value="85" />
+                <option name="86" value="86" />
+                <option name="87" value="87" />
+                <option name="88" value="88" />
+                <option name="89" value="89" />
+                <option name="90" value="90" />
+                <option name="91" value="91" />
+                <option name="92" value="92" />
+                <option name="93" value="93" />
+                <option name="94" value="94" />
+                <option name="95" value="95" />
+                <option name="96" value="96" />
+                <option name="97" value="97" />
+                <option name="98" value="98" />
+                <option name="99" value="99" />
+                <option name="100" value="100" />
+            </options>
+        </parameter>
+        <parameter name="CAM_UPLOAD" type="int32" default="1">
+            <description>Image Upload</description>
+            <options>
+                <option name="Idle" value="0" />
+                <option name="Upload now" value="1" />
+            </options>
+        </parameter>
+    </parameters>
+</mavlinkcamera>
