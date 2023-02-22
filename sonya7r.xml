@@ -94,26 +94,22 @@
         <parameter name="CAM_SHUTTERSPD" type="int32" default="17">
             <description>Shutter Speed</description>
             <options>
-                <option name="30" value="0" />
-                <option name="20" value="1" />
-                <option name="10" value="2" />
-                <option name="1" value="3" />
-                <option name="1/2" value="4" />
-                <option name="1/5" value="5" />
-                <option name="1/10" value="6" />
-                <option name="1/15" value="7" />
-                <option name="1/25" value="8" />
-                <option name="1/40" value="9" />
-                <option name="1/80" value="10" />
-                <option name="1/125" value="11" />
-                <option name="1/200" value="12" />
-                <option name="1/320" value="13" />
-                <option name="1/500" value="14" />
-                <option name="1/800" value="15" />
-                <option name="1/1250" value="16" />
-                <option name="1/1600" value="17" />
-                <option name="1/2500" value="18" />
-                <option name="1/4000" value="19" />
+                <option name="1" value="1" />
+                <option name="1/2" value="2" />
+                <option name="1/4" value="4" />
+                <option name="1/8" value="8" />
+                <option name="1/15" value="15" />
+                <option name="1/30" value="30" />
+                <option name="1/60" value="60" />
+                <option name="1/125" value="125" />
+                <option name="1/250" value="250" />
+                <option name="1/500" value="500" />
+                <option name="1/1000" value="1000" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1600" value="1600" />
+                <option name="1/2500" value="2500" />
+                <option name="1/4000" value="4000" />
+                <option name="1/8000" value="8000" />
             </options>
         </parameter>
         <parameter name="CAM_APERTURE" type="int32" default="16">
@@ -148,21 +144,21 @@
             <description>ISO</description>
             <options>
                 <option name="AUTO" value="0" />
-                <option name="100" value="1" />
-                <option name="125" value="1" />
-                <option name="160" value="2" />
-                <option name="200" value="1" />
-                <option name="250" value="3" />
-                <option name="400" value="4" />
-                <option name="640" value="5" />
-                <option name="800" value="6" />
-                <option name="1250" value="7" />
-                <option name="2000" value="8" />
-                <option name="3200" value="9" />
-                <option name="5000" value="10" />
-                <option name="8000" value="11" />
-                <option name="12800" value="12" />
-                <option name="16000" value="13" />
+                <option name="100" value="100" />
+                <option name="125" value="125" />
+                <option name="160" value="160" />
+                <option name="200" value="200" />
+                <option name="250" value="250" />
+                <option name="400" value="400" />
+                <option name="640" value="640" />
+                <option name="800" value="800" />
+                <option name="1250" value="1250" />
+                <option name="2000" value="2000" />
+                <option name="3200" value="3200" />
+                <option name="5000" value="5000" />
+                <option name="8000" value="8000" />
+                <option name="12800" value="12800" />
+                <option name="16000" value="16000" />
             </options>
         </parameter>
         <parameter name="CAM_EV" type="int32" default="5">
@@ -184,8 +180,8 @@
         <parameter name="CAM_SAVEPATH" type="int32" default="1">
             <description>Image Save Path</description>
             <options>
-                <option name="Front SD card" value="1" />
-                <option name="Side SD card" value="0" />
+                <option name="SD slot 1" value="1" />
+                <option name="SD slot 2" value="0" />
             </options>
         </parameter>
         <parameter name="CAM_PHOTOQUAL" type="int32" default="3">
