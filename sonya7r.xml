@@ -268,6 +268,19 @@
                 <option name="DMF" value="6" />
             </options>
         </parameter>
+        <parameter name="CAM_FOCUSAREA" type="int32" default="1">
+            <description>Focus Mode</description>
+            <options>
+                <option name="Wide" value="1" />
+                <option name="Zone" value="2" />
+                <option name="Center" value="3" />
+                <option name="Flexible Spot S" value="4" />
+                <option name="Flexible Spot M" value="5" />
+                <option name="Flexible Spot L" value="6" />
+                <option name="Expand Flexible Spot" value="7" />
+                <option name="Flexible Spot" value="8" />
+            </options>
+        </parameter>
         <parameter name="CAM_FOCUSVAL" type="int32" default="0">
             <description>Focus Value</description>
             <options>
