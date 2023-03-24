@@ -308,5 +308,12 @@
                 <option name="Upload now" value="1" />
             </options>
         </parameter>
+        <parameter name="CAM_RGBIR" type="int32" default="0">
+            <description>RGB/Infrared</description>
+            <options>
+                <option name="RGB" value="0" />
+                <option name="Infrared" value="1" />
+            </options>
+        </parameter>
     </parameters>
 </mavlinkcamera>
