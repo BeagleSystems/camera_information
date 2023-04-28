@@ -322,5 +322,8 @@
                 <option name="To SD and Jetson" value="3" />
             </options>
         </parameter>
+        <parameter name="CAM_BROADCAST" type="bool" default="0">
+            <description>Broadcast to Ant Media</description>
+        </parameter>
     </parameters>
 </mavlinkcamera>
