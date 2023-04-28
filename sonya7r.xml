@@ -315,5 +315,12 @@
                 <option name="Infrared" value="1" />
             </options>
         </parameter>
+        <parameter name="CAM_IMGSTORE" type="int32" default="2">
+            <description>Image Storage</description>
+            <options>
+                <option name="To SD" value="2" />
+                <option name="To SD and Jetson" value="3" />
+            </options>
+        </parameter>
     </parameters>
 </mavlinkcamera>
