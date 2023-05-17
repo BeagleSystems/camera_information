@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mavlinkcamera>
+    <definition version="7">
+        <model>Nighthawk2</model>
+        <vendor>Nextvision</vendor>
+    </definition>
+    <parameters>
+        <!-- control = 0 tells us this should not create an automatic UI control -->
+        <parameter name="CAM_RGBIR" type="int32" default="0">
+            <description>RGB/Infrared</description>
+            <options>
+                <option name="RGB" value="0" />
+                <option name="Infrared" value="1" />
+            </options>
+        </parameter>
+        <parameter name="CAM_DEROTATE" type="bool" default="1">
+            <description>Perform Roll Derotation</description>
+        </parameter>
+    </parameters>
+</mavlinkcamera>

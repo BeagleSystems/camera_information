@@ -9,7 +9,7 @@
         <parameter name="CAM_MODE" type="int32" default="0" control="1">
             <description>Camera Mode</description>
             <!-- This tells us when this parameter changes, these parameters must be updated (requested)-->
-            <updates>0
+            <updates>
                 <update>CAM_SHUTTERSPD</update>
                 <update>CAM_ISO</update>
                 <update>CAM_APERTURE</update>
@@ -306,6 +306,13 @@
             <options>
                 <option name="Idle" value="0" />
                 <option name="Upload now" value="1" />
+            </options>
+        </parameter>
+        <parameter name="CAM_SETTINGS" type="int32" default="0">
+            <description>Image Upload</description>
+            <options>
+                <option name="Load" value="0" />
+                <option name="Save" value="1" />
             </options>
         </parameter>
         <parameter name="CAM_RGBIR" type="int32" default="0">
