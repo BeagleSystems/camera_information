@@ -322,6 +322,15 @@
                 <option name="Infrared" value="1" />
             </options>
         </parameter>
+        <parameter name="CAM_DEROTATE" type="int32" default="1">
+            <description>Perform Roll Derotation</description>
+            <options>
+                <option name="No derotation" value="0" />
+                <option name="Derotation" value="1" />
+                <option name="Force no derotation" value="2" />
+                <option name="Force derotation" value="3" />
+            </options>
+        </parameter>
         <parameter name="CAM_IMGSTORE" type="int32" default="2">
             <description>Image Storage</description>
             <options>
