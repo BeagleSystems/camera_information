@@ -289,16 +289,6 @@
                 <option name="Flexible Spot M" value="5" />
                 <option name="Flexible Spot L" value="6" />
                 <option name="Expand Flexible Spot" value="7" />
-                <option name="Flexible Spot" value="8" />
-            </options>
-        </parameter>
-        <parameter name="CAM_FOCUSVAL" type="int32" default="0">
-            <description>Focus Ratio</description>
-            <options>
-                <option name="OFF" value="0" />
-                <option name="x1.0" value="10" />
-                <option name="x4.0" value="40" />
-                <option name="x8.0" value="80" />
             </options>
         </parameter>
         <parameter name="CAM_UPLOAD" type="int32" default="1">
@@ -309,10 +299,11 @@
             </options>
         </parameter>
         <parameter name="CAM_SETTINGS" type="int32" default="0">
-            <description>Camera settings</description>
+            <description>Camera parameters</description>
             <options>
-                <option name="Load" value="0" />
+                <option name="Idle" value="0" />
                 <option name="Save" value="1" />
+                <option name="Load" value="2" />
             </options>
         </parameter>
         <parameter name="CAM_RGBIR" type="int32" default="0">

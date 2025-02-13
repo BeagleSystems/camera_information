@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mavlinkcamera>
+    <definition version="1">
+        <model>GzModel</model>
+        <vendor>GzVendor</vendor>
+    </definition>
+    <parameters>
+        <!-- control = 0 tells us this should not create an automatic UI control -->
+        <parameter name="CAM_MODE" type="int32" default="0" control="1">
+            <description>Camera Mode</description>
+            <!-- This tells us when this parameter changes, these parameters must be updated (requested)-->
+            <updates>
+            </updates>
+            <options>
+                <option name="Photo" value="0">
+                    <exclusions>
+                    </exclusions>
+                </option>
+                <option name="Video" value="1">
+                </option>
+                <option name="Download" value="2">
+                </option>
+            </options>
+        </parameter>
+        <parameter name="CAM_UPLOAD" type="int32" default="1">
+            <description>Image Upload</description>
+            <options>
+                <option name="Idle" value="0" />
+                <option name="Upload now" value="1" />
+            </options>
+        </parameter>
+        <parameter name="CAM_BROADCAST" type="bool" default="0">
+            <description>Broadcast to Ant Media</description>
+        </parameter>
+    </parameters>
+</mavlinkcamera>
